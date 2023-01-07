@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.Write($"Введите количество элементов массива: ");
+﻿Console.Write($"Введите количество элементов массива: ");
 int elementsCount = int.Parse(Console.ReadLine());
 string[] arrString = new string[elementsCount];
 
@@ -13,4 +12,7 @@ for (int i = 0; i < arrString.Length; i++)
 {
     Console.WriteLine(arrString[i]);
 }
+Console.ReadLine();
+var result = arrString.Where(s => s.Length <= 3).ToArray(); 
+Console.WriteLine(string.Join(", ", result)); 
 Console.ReadLine();
